@@ -1,0 +1,42 @@
+The following 6 design patterns belong to the Creational Design Pattern category.
+
+	Builder Design Pattern
+	Abstract Factory Design Pattern
+	Factory Design Pattern
+	Fluent Interface Design Pattern
+	Prototype Design Pattern
+    Singleton Design Pattern
+
+The Builder design pattern separates the construction of a complex object from its representation so that the same construction process can create different representations.
+This real-world code demonstates the Builder pattern in which different vehicles are assembled in a step-by-step fashion. The Shop uses VehicleBuilders to construct a variety of Vehicles in a series of sequential steps. 
+
+The Abstract Factory design pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+The Factory Method design pattern defines an interface for creating an object, but let subclasses decide which class to instantiate. This pattern lets a class defer instantiation to subclasses.
+
+The main objective of the Fluent Interface Design Pattern is that we can apply multiple properties (or methods) to an object by connecting them with dots (.) without having to re-specify the object name each time. 
+FluentEmployee obj = new FluentEmployee();
+obj.NameOfTheEmployee("Anurag Mohanty")
+		.Born("10/10/1992")
+		.WorkingOn("IT")
+		.StaysAt("Mumbai-India");
+
+The Prototype design pattern specifies the kind of objects to create using a prototypical instance, and create new objects by copying this prototype.
+This real-world code demonstrates the Prototype pattern in which new Color objects are created by copying pre-existing, user-defined Colors of the same type.
+
+The Singleton design pattern ensures a class has only one instance and provide a global point of access to it.
+This real-world code demonstrates the Singleton pattern as a LoadBalancing object. Only a single instance (the singleton) of the class can be created because servers may dynamically come on- or off-line and every request must go throught the one object that has knowledge about the state of the (web) farm. 
+
+
+***
+The main difference between a "factory method" and an "abstract factory" is that the factory method is a method, and an abstract factory is an object. I think a lot of people get these two terms confused, and start using them interchangeably. I remember that I had a hard time finding exactly what the difference was when I learnt them.
+
+Because the factory method is just a method, it can be overridden in a subclass, hence the second half of your quote:
+
+... the Factory Method pattern uses inheritance and relies on a subclass to handle the desired object instantiation.
+
+The quote assumes that an object is calling its own factory method here. Therefore the only thing that could change the return value would be a subclass.
+
+The abstract factory is an object that has multiple factory methods on it. Looking at the first half of your quote:
+
+... with the Abstract Factory pattern, a class delegates the responsibility of object instantiation to another object via composition ...

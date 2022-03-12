@@ -1,0 +1,44 @@
+The following is the list of Structural Design Patterns.
+
+	Bridge Design Pattern
+    Adapter Design Pattern
+    Facade Design Pattern
+	Flyweight Design Pattern
+	Proxy Design Pattern
+	Composite Design Pattern
+    Decorator Design Pattern
+	
+The Bridge design pattern decouples an abstraction from its implementation so that the two can vary independently.
+This real-world code demonstrates the Bridge pattern in which a BusinessObject abstraction is decoupled from the implementation in DataObject. The DataObject implementations can evolve dynamically without changing any clients. 
+
+The Adapter design pattern converts the interface of a class into another interface clients expect. This design pattern lets classes work together that couldn‘t otherwise because of incompatible interfaces.
+This real-world code demonstrates the use of a legacy chemical databank. Chemical compound objects access the databank through an Adapter interface.
+
+The Facade design pattern provides a unified interface to a set of interfaces in a subsystem. This pattern defines a higher-level interface that makes the subsystem easier to use.
+This real-world code demonstrates the Facade pattern as a MortgageApplication object which provides a simplified interface to a large subsystem of classes measuring the creditworthiness of an applicant.
+
+The Flyweight design pattern uses sharing to support large numbers of fine-grained objects efficiently.
+This real-world code demonstrates the Flyweight pattern in which a relatively small number of Character objects is shared many times by a document that has potentially many characters.
+
+Flyweight  (Character)
+	declares an interface through which flyweights can receive and act on extrinsic state.
+ConcreteFlyweight   (CharacterA, CharacterB, ..., CharacterZ)
+	implements the Flyweight interface and adds storage for intrinsic state, if any. A ConcreteFlyweight object must be sharable. Any state it stores must be intrinsic, that is, it must be independent of the ConcreteFlyweight object's context.
+UnsharedConcreteFlyweight   ( not used )
+	not all Flyweight subclasses need to be shared. The Flyweight interface enables sharing, but it doesn't enforce it. It is common for UnsharedConcreteFlyweight objects to have ConcreteFlyweight objects as children at some level in the flyweight object structure (as the Row and Column classes have).
+FlyweightFactory   (CharacterFactory)
+	creates and manages flyweight objects
+	ensures that flyweight are shared properly. When a client requests a flyweight, the FlyweightFactory objects assets an existing instance or creates one, if none exists.
+Client   (FlyweightApp)
+	maintains a reference to flyweight(s).
+	computes or stores the extrinsic state of flyweight(s).
+
+
+The Proxy design pattern provides a surrogate or placeholder for another object to control access to it.
+This real-world code demonstrates the Proxy pattern for a Math object represented by a MathProxy object. 
+
+The Composite design pattern composes objects into tree structures to represent part-whole hierarchies. This pattern lets clients treat individual objects and compositions of objects uniformly.
+This real-world code demonstrates the Composite pattern used in building a graphical tree structure made up of primitive nodes (lines, circles, etc) and composite nodes (groups of drawing elements that make up more complex elements).
+
+The Decorator design pattern attaches additional responsibilities to an object dynamically. This pattern provide a flexible alternative to subclassing for extending functionality.
+This real-world code demonstrates the Decorator pattern in which 'borrowable' functionality is added to existing library items (books and videos).

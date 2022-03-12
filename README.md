@@ -1,0 +1,1 @@
+A collection of design patterns for C#. Mostly consisting of examples from https://www.dofactory.com/net/design-patterns

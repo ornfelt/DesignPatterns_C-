@@ -1,0 +1,51 @@
+The following design patterns belong to the Behavioral Design Pattern category.
+
+	Command Design Pattern
+    Observer Design Pattern
+	Memento Design Pattern
+    Mediator Design Pattern
+	Iterator Design Pattern
+	Template Method Design Pattern
+	Strategy Design Pattern
+	
+	Visitor Design Pattern
+	Interpreter Design Pattern
+    State Design Pattern
+	Chain of Responsibility Design Pattern
+
+
+The Command design pattern encapsulates a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+Calculator with commands and undo's.
+
+The Observer design pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+IBM stock (subject) that attaches investors (observers) who gets notified when stock changes.
+
+The Memento design pattern without violating encapsulation, captures and externalizes an object‘s internal state so that the object can be restored to this state later.
+SalesProspect, ProspectMemory stores memento...
+
+The Mediator design pattern defines an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.
+Participant (Colleague) chats to other participants via a mediator...
+This real-world code demonstrates the Mediator pattern facilitating loosely coupled communication between different Participants registering with a Chatroom. The Chatroom is the central hub through which all communication takes place. At this point only one-to-one communication is implemented in the Chatroom, but would be trivial to change to one-to-many. 
+Good example of mediator: flight control center taking signals from planes and sending them out appropriately...
+
+The Iterator design pattern provides a way to access the elements of an aggregate object (collection) sequentially without exposing its underlying representation.
+
+The Template Method design pattern defines the skeleton of an algorithm in an operation, deferring some steps to subclasses. This pattern lets subclasses redefine certain steps of an algorithm without changing the algorithm‘s structure.
+This real-world code demonstrates a Template method named Run() which provides a skeleton calling sequence of methods. Implementation of these steps are deferred to the CustomerDataObject subclass which implements the Connect, Select, Process, and Disconnect methods. 
+
+The Strategy design pattern defines a family of algorithms, encapsulate each one, and make them interchangeable. This pattern lets the algorithm vary independently from clients that use it.
+This real-world code demonstrates the Strategy pattern which encapsulates sorting algorithms in the form of sorting objects. This allows clients to dynamically change sorting strategies including Quicksort, Shellsort, and Mergesort. 
+
+---
+
+The Visitor design pattern represents an operation to be performed on the elements of an object structure. This pattern lets you define a new operation without changing the classes of the elements on which it operates.
+This real-world code demonstrates the Visitor pattern in which two objects traverse a list of Employees and performs the same operation on each Employee. The two visitor objects define different operations -- one adjusts vacation days and the other income.
+
+Given a language, the Interpreter design pattern defines a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+This real-world code demonstrates the Interpreter pattern which is used to convert a Roman numeral to a decimal. 
+
+The State design pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+This real-world code demonstrates the State pattern which allows an Account to behave differently depending on its balance. The difference in behavior is delegated to State objects called RedState, SilverState and GoldState. These states represent overdrawn accounts, starter accounts, and accounts in good standing.
+
+The Chain of Responsibility design pattern avoids coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. This pattern chains the receiving objects and passes the request along the chain until an object handles it.
+This real-world code demonstrates the Chain of Responsibility pattern in which several linked managers and executives can respond to a purchase request or hand it off to a superior. Each position has its own set of rules which orders they can approve.

@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DesignPatterns.Command
+{
+    /// <summary>
+    /// The 'Receiver' class
+    /// </summary>
+    public class Receiver
+    {
+        public void Action()
+        {
+            Console.WriteLine("Called Receiver.Action()");
+        }
+    }
+}
