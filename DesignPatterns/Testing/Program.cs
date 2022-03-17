@@ -22,9 +22,32 @@ namespace DesignPatterns.Testing
 
             // Test composition
             //CompositionMonster.TestCompositionMonster();
-            TestEmps();
-            Console.ReadLine();
+
+            // Test employee salaries (from pp in csd)
+            //TestEmps();
+            //Console.ReadLine();
+
+            // Test pointers (needs compiling with /unsafe)
+            //PointerMethod();
+
+            // Test contract class
+            ContractTesting.StartContractTesting();
         }
+
+       // public unsafe void PointerMethod()  
+       // {  
+       //     int x = 10;  
+       //     int y = 20;  
+       //     int* sum = Swap(&x, &y);  
+       //     Console.WriteLine(*sum);  
+       // }  
+
+       // public unsafe int* Swap(int* x, int* y)  
+       // {  
+       //     int sum;  
+       //     sum = *x + *y;  
+       //     return ∑  
+       // }
 
         private static void TestEmps()
         {
